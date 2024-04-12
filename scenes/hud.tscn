@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=3 uid="uid://bloou8ciqncf7"]
+
+[ext_resource type="Texture2D" uid="uid://txysa54jrj7j" path="res://assets/items/heart.png" id="1_7gch1"]
+[ext_resource type="Texture2D" uid="uid://dclpuuxlikxn3" path="res://Alterções caua/Enemy/sul/1.png" id="2_blrfc"]
+[ext_resource type="FontFile" uid="uid://cvtkhuaoexv1w" path="res://ttfs/Minecraft.ttf" id="2_d02bh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v8vdi"]
+border_width_top = 2
+border_color = Color(0, 0, 0, 1)
+
+[node name="Hud" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_right = 768.0
+offset_bottom = 48.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_v8vdi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(37, 24)
+scale = Vector2(3, 3)
+texture = ExtResource("1_7gch1")
+
+[node name="LivesLabel" type="Label" parent="."]
+offset_left = 66.0
+offset_top = 1.0
+offset_right = 110.0
+offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("2_d02bh")
+theme_override_font_sizes/font_size = 30
+text = "X 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WaveLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -58.5
+offset_top = 1.0
+offset_right = 58.5
+offset_bottom = 46.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_d02bh")
+theme_override_font_sizes/font_size = 30
+text = "ONDA: 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(656, 8)
+scale = Vector2(2, 2)
+texture = ExtResource("2_blrfc")
+
+[node name="EnemiesLabel" type="Label" parent="."]
+offset_left = 680.0
+offset_top = 1.0
+offset_right = 741.0
+offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("2_d02bh")
+theme_override_font_sizes/font_size = 30
+text = "X 10"
+horizontal_alignment = 1
+vertical_alignment = 1
