@@ -2,7 +2,7 @@ extends Control
 
 func _ready():
 	$ColorRect/controls/startBtn.grab_focus()
-	
+	$AudioStreamPlayer.play()
 func _on_start_btn_pressed() -> void:
 	get_tree().change_scene_to_file("res://imagens rapidas/levels/scenes/test_level.tscn")
 	

@@ -15,8 +15,9 @@ script = ExtResource("1_gqnh8")
 
 [node name="World" parent="." instance=ExtResource("1_aiba5")]
 
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="World"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="World"]
 stream = ExtResource("3_q031u")
+autoplay = true
 
 [node name="Player" parent="." instance=ExtResource("2_487cn")]
 
@@ -28,19 +29,18 @@ bullet_scene = ExtResource("5_3gaw5")
 
 [node name="WaveOverTimer" type="Timer" parent="."]
 process_mode = 2
+wait_time = 0.5
 one_shot = true
 
 [node name="RestartTimer" type="Timer" parent="."]
 process_mode = 2
+wait_time = 0.3
 one_shot = true
 
 [node name="Hud" parent="." instance=ExtResource("7_iprm0")]
 
 [node name="GameOver" parent="." instance=ExtResource("8_qw877")]
 process_mode = 2
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_q031u")
 
 [node name="bg_music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_q031u")

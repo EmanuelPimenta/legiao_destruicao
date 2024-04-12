@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://di8wcdvsbihqs"]
+[gd_scene load_steps=7 format=3 uid="uid://di8wcdvsbihqs"]
 
 [ext_resource type="FontFile" uid="uid://cvtkhuaoexv1w" path="res://ttfs/Minecraft.ttf" id="1_2mlab"]
+[ext_resource type="AudioStream" uid="uid://ctabg3puo5bv6" path="res://efeitos sonoros/trilha zumbi .wav" id="2_ur51y"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vwwn"]
 bg_color = Color(0.52549, 0, 0.0117647, 1)
@@ -92,3 +93,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_4rko6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3q2k1")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_3usya")
 text = "JOGAR DENOVO"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_ur51y")
+autoplay = true

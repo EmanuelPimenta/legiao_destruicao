@@ -95,6 +95,7 @@ format = 2
 [node name="bg_music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_5eol7")
 autoplay = true
+mix_target = 1
 
 [connection signal="pressed" from="ColorRect/controls/startBtn" to="." method="_on_start_btn_pressed"]
 [connection signal="pressed" from="ColorRect/controls/controlsBtn" to="." method="_on_controls_btn_pressed"]
