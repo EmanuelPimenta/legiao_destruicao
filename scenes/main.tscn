@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bfs2bthj3hncv"]
+[gd_scene load_steps=11 format=3 uid="uid://bfs2bthj3hncv"]
 
 [ext_resource type="PackedScene" uid="uid://cgtiyqhqk6l6f" path="res://scenes/world.tscn" id="1_aiba5"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_gqnh8"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bu7dbyiwoeck8" path="res://scenes/bullet.tscn" id="5_3gaw5"]
 [ext_resource type="PackedScene" uid="uid://bloou8ciqncf7" path="res://scenes/hud.tscn" id="7_iprm0"]
 [ext_resource type="PackedScene" uid="uid://di8wcdvsbihqs" path="res://scenes/game_over.tscn" id="8_qw877"]
+[ext_resource type="PackedScene" uid="uid://doed8kkdxmcav" path="res://scenes/pause_menu.tscn" id="10_utln7"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_gqnh8")
@@ -45,6 +46,8 @@ process_mode = 2
 [node name="bg_music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_q031u")
 autoplay = true
+
+[node name="pause_menu" parent="." instance=ExtResource("10_utln7")]
 
 [connection signal="shoot" from="Player" to="BulletManager" method="_on_player_shoot"]
 [connection signal="hit_p" from="EnemySpawner" to="." method="_on_enemy_spawner_hit_p"]
